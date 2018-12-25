@@ -162,6 +162,10 @@ button:focus {
   overflow: hidden;
 }
 
+#work .col-lg-4 a p {
+  display: none;
+}
+
 .work-item {
     clear: both;
     padding: 50px;

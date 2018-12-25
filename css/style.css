@@ -158,10 +158,6 @@ button:focus {
   letter-spacing: 0.5px;
 }
 
-#work .col-lg-4 {
-  overflow: hidden;
-}
-
 .work-item {
     clear: both;
     padding: 50px;
