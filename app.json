@@ -1,0 +1,8 @@
+{
+  "name": "Mohamed.la",
+  "description": "Website Design and Development",
+  "website": "mohamed.la",
+  "repository": "https://git.heroku.com/mohamed-la.git",
+  "success_url": "/",
+  "image": "heroku/nodejs"
+}
