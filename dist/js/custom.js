@@ -26,7 +26,7 @@
             // window.innerWidth<800 ? null : $('.back-img').css('left', '-' + Math.min(scroll/150, 100) + 'vw');
             // Blur video background as user scrolls
             $('.home-table').css('filter', 'blur(' + Math.min(scroll/100, 5) + 'px)');
-
+            $('.home-table').css('transform', `rotate3d(1, 0, 0, ${Math.min(scroll/5, 50)}deg)`);
             if (scroll >= 50) {
                 $(".sticky").addClass("stickyadd");
                 window.innerWidth<800 ? null : $('.st0').css('fill', '#000');
@@ -39,19 +39,22 @@
 
     //Smooth
     BusionApp.prototype.initSmoothLink = function() {
-        $('.navbar-nav a, .bus_home_btn a').on('click', function(event) {
-            console.log(this);
-            var $anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top - 70
-            }, 1500, 'easeInOutExpo');
-            event.preventDefault();
-        });
-        $('#work .mt-3 a').on('click', function(e) {
-          $('.modal').fadeIn(400);
-          console.log('test');
+      $('.navbar-nav a, .bus_home_btn a').on('click', function(event) {
+          console.log(this);
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top - 70
+          }, 1500, 'easeInOutExpo');
           event.preventDefault();
-        });
+      });
+      $('#work .mt-3 a').on('click', function(e) {
+        let $info = $(this).find('p').html();
+        let $img = $(this).find('img').attr('src');
+        console.log($info, $img);
+        $('.modal').addClass('shown').append(`<img src=${$img} class="modal-img"><p>${$info}</p>`);
+        console.log('test');
+        event.preventDefault();
+      });
     },
 
     //ScrollSpy

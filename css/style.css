@@ -454,6 +454,7 @@ button:focus {
     font-size: 16px;
     line-height: 1.5;
     max-width: 500px;
+    padding: 0 !important;
     color: rgb(132, 159, 171);
 }
 

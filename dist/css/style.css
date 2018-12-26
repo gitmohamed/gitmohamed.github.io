@@ -160,10 +160,15 @@ button:focus {
 
 #work .col-lg-4 {
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 #work .col-lg-4 a p {
   display: none;
+}
+
+.modal.shown {
+  display: block;
 }
 
 .work-item {
@@ -462,12 +467,17 @@ button:focus {
     font-size: 16px;
     line-height: 1.5;
     max-width: 500px;
+    padding: 0 !important;
     color: rgb(132, 159, 171);
 }
 
 .bus_home_btn span {
     position: relative;
     top: 14px;
+}
+
+.bus_home_btn {
+    padding-top: 7px;
 }
 
 /*-----HOME 2----*/
