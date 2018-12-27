@@ -26,7 +26,7 @@
             // window.innerWidth<800 ? null : $('.back-img').css('left', '-' + Math.min(scroll/150, 100) + 'vw');
             // Blur video background as user scrolls
             $('.home-table').css('filter', 'blur(' + Math.min(scroll/100, 5) + 'px)');
-            $('.home-table').css('transform', `rotate3d(1, 0, 0, ${Math.min(scroll/5, 50)}deg)`);
+            // $('.home-table').css('transform', `rotate3d(1, 0, 0, ${Math.min(scroll/5, 50)}deg)`);
             if (scroll >= 50) {
                 $(".sticky").addClass("stickyadd");
                 window.innerWidth<800 ? null : $('.st0').css('fill', '#000');
@@ -48,11 +48,8 @@
           event.preventDefault();
       });
       $('#work .mt-3 a').on('click', function(e) {
-        let $info = $(this).find('p').html();
-        let $img = $(this).find('img').attr('src');
-        console.log($info, $img);
-        $('.modal').addClass('shown').append(`<img src=${$img} class="modal-img"><p>${$info}</p>`);
-        console.log('test');
+        console.log(e);
+        $('#port-items').addClass('shown');
         event.preventDefault();
       });
     },
