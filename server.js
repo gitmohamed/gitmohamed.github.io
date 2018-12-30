@@ -1,11 +1,14 @@
 const express = require('express');
+// const cors = require('cors');
 
 const app = express();
 
 app.set('port', (process.env.PORT || 3333))
+// app.use(cors({origin: 'http://localhost:3333'}));
 app.use(express.static('./dist'))
 
 app.get('/', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.sendFile(`${__dirname}/index_2.html`)
 }).post('/contact', (req, res) => {
   // let mailOpts, smtpTrans;

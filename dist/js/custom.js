@@ -25,7 +25,8 @@
             // Live Coin Price
             // window.innerWidth<800 ? null : $('.back-img').css('left', '-' + Math.min(scroll/150, 100) + 'vw');
             // Blur video background as user scrolls
-            $('.home-table').css('filter', 'blur(' + Math.min(scroll/100, 5) + 'px)');
+            $('.home-table').css('transform', `translateY(${scroll/5}px)`);
+            $('.home-table').css('opacity', `${1 - Math.max(scroll/800, 0)}`);
             // $('.home-table').css('transform', `rotate3d(1, 0, 0, ${Math.min(scroll/5, 50)}deg)`);
             if (scroll >= 50) {
                 $(".sticky").addClass("stickyadd");
@@ -47,10 +48,29 @@
           }, 1500, 'easeInOutExpo');
           event.preventDefault();
       });
-      $('#work .mt-3 a').on('click', function(e) {
-        console.log(e);
-        $('#port-items').addClass('shown');
+      $('#work .mt-3').on('click', function(e) {
+        console.log(e.currentTarget.id);
+        if ($('body').css('overflow') != 'hidden') {
+            $('body').css('overflow', 'hidden');
+        }
+        $('#port-items').fadeIn('fast');
+        $('#port-items .item').hide();
+        $('#port-items .item').eq(e.currentTarget.id - 1).css('opacity', '1');
+        if (window.innerWidth > 768) {
+            $('#port-items .item').eq(e.currentTarget.id - 1).css('display', 'flex');
+        } else {
+            // Mobile UI portfolio section interactions
+            $('#port-items .item').eq(e.currentTarget.id - 1).css('display', 'inline-block');
+            $('#port-items .item').eq(e.currentTarget.id - 2).css({'display': 'inline-block', 'top': '-100%', 'position': 'absolute'});
+        }
         event.preventDefault();
+      });
+      $('#work .item .mdi-window-close').on('click', function(e) {
+        if ($('body').css('overflow') != 'auto') {
+            $('body').css('overflow', 'auto');
+        }
+        $('#port-items').fadeOut('fast'); 
+        // $('#port-items .item').css('opacity', '0');
       });
     },
 

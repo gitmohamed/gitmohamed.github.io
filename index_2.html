@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Website Development - Graphic Design</title>
         <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <meta name="author" content="SRBThemes" />
+        <meta name="keywords" content="Web Design, Web Development, App Development" />
+        <meta name="author" content="Mohamed Hassan" />
+        <meta http-equiv="Access-Control-Allow-Origin" content="*"> 
+        <header name = "Access-Control-Allow-Origin" value = "*" />
 
         <link rel="shortcut icon" href="images/favicon.ico">
 
@@ -89,14 +91,14 @@
 
         <section class="home-bg section h-100vh bg-dark" id="home">
             <div class="bg-overlay"></div>
-            <a id="video" class="youtube-bg" data-property="{videoURL:'https://www.youtube.com/watch?v=CjBoK8f47EI',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
+            <!-- <a id="video" class="youtube-bg" data-property="{videoURL:'https://www.youtube.com/watch?v=CjBoK8f47EI',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a> -->
             <div class="home-table">
                 <div class="home-table-center">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-12">
                                 <div class="text-white text-center">
-                                    <h1 class="bus_home_title mx-auto">Creating websites that empower, engage and educate</h1>
+                                    <h1 class="bus_home_title mx-auto">Create to empower, engage and educate</h1>
                                     <p class="bus_home_subtitle pt-4 mx-auto">Website Development - Marketing - Design</p>
                                     <div class="bus_home_btn">
                                         <a href="#work" class="btn btn-outline-custom btn-rounded mt-4 mr-3">View Portfolio</a>
@@ -248,50 +250,38 @@
                     </div>
                 </div>
                 <div class="row mt-4 pt-4">
-                  <div class="col-lg-4 mt-3">
-                    <a target="_blank" href=""><img src="images/work/thumbs/df-thumb.png" alt="">
-                      <p>Django, HTML, SCSS/CSS, JS, Sketch</p>
-                    </a>
+                  <div id="1" class="col-lg-4 mt-3">
+                    <a target="_blank" href=""><img src="images/work/thumbs/df-thumb.png" alt=""></a>
                   </div>
-                  <div class="col-lg-4 mt-3">
-                    <a target="_blank" href="http://livecoinpriceapp.com"><img src="images/work/thumbs/live-coin-thumb.png" alt="">
-                      <p>Node JS, HTML, CSS, JS</p>
-                    </a>
+                  <div id="2" class="col-lg-4 mt-3">
+                    <a target="_blank" href="http://livecoinpriceapp.com"><img src="images/work/thumbs/live-coin-thumb.png" alt=""></a>
                   </div>
-                  <div class="col-lg-4 mt-3">
-                    <a target="_blank" href="#"><img src="images/work/thumbs/easyconcert-thumb.png" alt="">
-                      <p>Sketch</p>
-                    </a>
+                  <div id="3" class="col-lg-4 mt-3">
+                    <a target="_blank" href="#"><img src="images/work/thumbs/easyconcert-thumb.png" alt=""></a>
                   </div>
-                  <div class="col-lg-4 mt-3">
-                    <a target="_blank" href="#"><img src="images/work/thumbs/vgod-email-thumb.png" alt="">
-                      <p>HTML, CSS, Sketch</p>
-                    </a>
+                  <div id="4" class="col-lg-4 mt-3">
+                    <a target="_blank" href="#"><img src="images/work/thumbs/vgod-email-thumb.png" alt=""></a>
                   </div>
-                  <div class="col-lg-4 mt-3">
-                    <a target="_blank" href="https://cubano-black.herokuapp.com"><img src="images/work/thumbs/cubano-blk-thumb.png" alt="">
-                      <p>JavaScript, HTML, CSS</p>
-                    </a>
+                  <div id="5" class="col-lg-4 mt-3">
+                    <a target="_blank" href="https://cubano-black.herokuapp.com"><img src="images/work/thumbs/cubano-blk-thumb.png" alt=""></a>
                   </div>
-                  <div class="col-lg-4 mt-3" style="border-left: 15px solid white;border-right: 15px solid white;">
-                    <a target="_blank" href="https://nameless-gorge-36762.herokuapp.com/"><img style="transform: scale(2.2)" src="images/work/aframe-sunset.gif" alt="">
-                      <p>JavaScript, HTML, CSS, aframe js</p>
-                    </a>
+                  <div id="6" class="col-lg-4" style="margin-top: 15px;border-left: 15px solid white;border-right: 15px solid white;">
+                    <a target="_blank" href="https://nameless-gorge-36762.herokuapp.com/"><img style="transform: scale(2.2)" src="images/work/aframe-sunset.gif" alt=""></a>
                   </div>
                 </div>
                 <div class="row" id="port-items">
                     <div class="item">
                         <div class="col-lg-6">
-                            <a target="_blank" href="#">
+                            <a href="#">
                                 <img src="images/work/dream-factory.png" alt="The Dream Factory">
                                 <span class="orange"></span>
                                 <img src="images/work/Profile.png" alt="The Dream Factory Profile">
                             </a>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 port-info">
                             <span class="cancel-modal"><i class="mdi mdi-window-close"></i></span>
                             <div class="port-logo">
-                                <img src="images/work/df-l.png" alt="Dream Factory">
+                                <h1>The Dream Factory</h1>
                             </div>
                             <p class="port-text">http://thedreamfactory.io is a convenient way for artists to take commissions online. Buyers can describe anything they imagine and artists can accept whatever inspires them most.</p>
                             <div class="port-buttons">
@@ -302,24 +292,78 @@
                     </div>
                     <div class="item">
                         <div class="col-lg-6">
-                            <a target="_blank" href="#">
-                                <img src="images/work/livecoinprice.PNG" alt="The Dream Factory">
+                            <a href="#">
+                                <img src="images/work/livecoinprice.PNG" alt="Live Coin Price">
                                 <span class="orange"></span>
-                                <img src="images/work/lcp-.gif" alt="The Dream Factory Profile">
+                                <img src="images/work/lcp-.gif" alt="Live Coin Price">
                             </a>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 port-info">
                             <span class="cancel-modal"><i class="mdi mdi-window-close"></i></span>
                             <div class="port-logo">
-                                <img src="images/work/df-l.png" alt="Dream Factory">
+                                <h1>Live Coin Price</h1>
                             </div>
-                            <p class="port-text"></p>
+                            <p class="port-text">Discord bot that quickly displays the current value of any of the top 1500+ cryptocurrancies when prompted. It even displays the % change for that coin in the last 24hours. Just add to any discord channel.</p>
                             <div class="port-buttons">
                                 <button type="button" name="visit">Visit</button>
                                 <button type="button" name="contact" onclick="exitModal()">Contact</button>
                             </div>
                         </div>
                     </div>
+                    <div class="item">
+                        <div class="col-lg-6">
+                            <a href="#">
+                                <img src="images/work/easy-concert.png" alt="Ease Concert Concept">
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <span class="cancel-modal"><i class="mdi mdi-window-close"></i></span>
+                            <div class="port-logo">
+                                <h1>Ease Concert Concept App</h1>
+                            </div>
+                            <p class="port-text">Designed in sketch, this app is intended to allow users to find tickets for upcoming concerts.</p>
+                            <div class="port-buttons">
+                                <button type="button" name="visit">Visit</button>
+                                <button type="button" name="contact" onclick="exitModal()">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-lg-6">
+                            <a href="#">
+                                <img src="images/work/vgod-mail.png" alt="VGOD Email">
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <span class="cancel-modal"><i class="mdi mdi-window-close"></i></span>
+                            <div class="port-logo">
+                                <h1>VGOD Abandoned cart email template</h1>
+                            </div>
+                            <p class="port-text">This email in particular was designed to win back customers who abandoned their carts during a transaction on https://officialvgod.com. Over several months hundreds of customers and tens of thousands in revenue was recovered from this automated email.</p>
+                            <div class="port-buttons">
+                                <button type="button" name="visit">Visit</button>
+                                <button type="button" name="contact" onclick="exitModal()">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                            <div class="col-lg-6">
+                                <a href="#">
+                                    <img src="images/work/sn-cub-svr.gif" alt="VGOD UI animation">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <span class="cancel-modal"><i class="mdi mdi-window-close"></i></span>
+                                <div class="port-logo">
+                                    <h1>VGOD Cubano Silver page animation</h1>
+                                </div>
+                                <p class="port-text">Often times quick prototypes of potential interface animations are necessary to make decisions. This - mouse animated - prototype went all the way to production on officialvgod.com</p>
+                                <div class="port-buttons">
+                                    <a target="_blank" href="https://cubano-black.herokuapp.com/"><button type="button" name="visit">Visit</button></a>
+                                    <button type="button" name="contact" onclick="exitModal()">Contact</button>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <!-- <div class="row mt-4 pt-4 vertical-content">
                     <div class="col-lg-12">
@@ -429,8 +473,10 @@
                                 <i class="mbri-letter"></i>
                             </div>
                             <div class="contact-detail mt-3">
-                                <p class="mb-0">Email me</p>
-                                <p class="text-muted">mohamedhdesign@gmail.com</p>
+                                <a href="mailto:mohamedhdesign@gmail.com">
+                                    <p class="mb-0">Email me</p>
+                                    <p class="text-muted">mohamedhdesign@gmail.com</p>
+                                </a>
                             </div>
                         </div>
                     </div>

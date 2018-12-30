@@ -101,6 +101,10 @@ button:focus {
     outline: none;
 }
 
+.font-weight-bold {
+    font-size: 1.6rem;
+}
+
 .white-header {
     color: whitesmoke;
 }
@@ -198,21 +202,6 @@ button:focus {
     height: 400px;
     right: 0;
     top: 0;
-}
-
-@media screen and (max-width: 900px) {
-    .work-item {
-        width: 100%;
-        padding: 0;
-        height: auto;
-    }
-    .work-hover img {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: scale(2);
-      right: 0;
-    }
 }
 
 /*==========================
@@ -497,22 +486,49 @@ button:focus {
 
 #port-items {
     display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    /* opacity: 0; */
+    background: white;
 }
 
 #port-items .item {
-    display: table;
-    padding: 30px;
+    display: flex;
+    background: white;
+    height: 100vh;
+    padding: 15px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+#port-items .item img {
+    width: 100%;
 }
 
 #port-items .item .mdi-window-close {
-    font-size: 24px;
+    font-size: 30px;
     padding: 10px;
     float: right;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#port-items .item .mdi-window-close:hover {
+    transform: rotate(90deg);
+    color: orange;
 }
 
 #port-items .item .status {
     font-size: 18px;
     color: #444;
+}
+
+#port-items .item .port-info {
+    padding: 0 30px;
 }
 
 #port-items .item span.orange {
@@ -523,10 +539,8 @@ button:focus {
 }
 
 .shown {
-    display: block;
+    display: block !important;
     opacity: 1 !important;
-
-    transition: all 0.3s ease-in-out;
 }
 
 .port-logo {
@@ -790,7 +804,43 @@ textarea.form-control {
         13.RESPONSIVE
 ============================*/
 
+@media screen and (max-width: 1100px) {
+    .mbri-menu {
+        color: black;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .work-item {
+        width: 100%;
+        padding: 0;
+        height: auto;
+    }
+    .work-hover img {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: scale(2);
+      right: 0;
+    }
+}
+
 @media (max-width: 768px) {
+    #port-items .item .mdi-window-close {
+        font-size: 40px;
+        padding: 15px;
+        background: #ffffff69;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    #port-items .item {
+        overflow-y: auto;
+        max-height: 100vh;
+    }
+    #port-items .item  .col-lg-6 {
+        width: 100%;
+    }
     .custom-nav {
         padding: 0px !important;
         background-color: #000000 !important;
@@ -842,5 +892,8 @@ textarea.form-control {
     }
     .home-half {
         padding: 120px 0 80px 0 !important;
+    }
+    .mbri-menu {
+        color: #ddd;
     }
 }
