@@ -525,10 +525,13 @@ button:focus {
 }
 
 #port-items .item .mdi-window-close {
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px;
-    float: right;
+    right: 4vw;
+    top: 4vh;
+    position: fixed;
     cursor: pointer;
+    will-change: transform, color;
     transition: all 0.3s ease-in-out;
 }
 
@@ -820,11 +823,11 @@ textarea.form-control {
         13.RESPONSIVE
 ============================*/
 
-/* @media screen and (max-width: 1100px) {
-    .mbri-menu {
-        color: black;
+@media screen and (max-width: 1400px) {
+    #port-items .item {
+      max-width: 80vw;
     }
-} */
+}
 
 @media screen and (max-width: 900px) {
     #port-items .item {
