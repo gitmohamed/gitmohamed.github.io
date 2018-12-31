@@ -30,10 +30,12 @@
             // $('.home-table').css('transform', `rotate3d(1, 0, 0, ${Math.min(scroll/5, 50)}deg)`);
             if (scroll >= 50) {
                 $(".sticky").addClass("stickyadd");
-                window.innerWidth<800 ? null : $('.st0').css('fill', '#000');
+                $('.st0').css('fill', '#000');
+                $(".mbri-menu").css('color', 'black');
             } else {
                 $(".sticky").removeClass("stickyadd");
-                window.innerWidth<800 ? null : $('.st0').css('fill', '#fff');
+                $('.st0').css('fill', '#fff');
+                $(".mbri-menu").css('color', 'white');
             }
         });
     },
@@ -41,15 +43,16 @@
     //Smooth
     BusionApp.prototype.initSmoothLink = function() {
       $('.navbar-nav a, .bus_home_btn a').on('click', function(event) {
-          console.log(this);
+          // console.log(this);
           var $anchor = $(this);
+          $('.navbar-collapse').removeClass('show');
           $('html, body').stop().animate({
               scrollTop: $($anchor.attr('href')).offset().top - 70
           }, 1500, 'easeInOutExpo');
           event.preventDefault();
       });
       $('#work .mt-3').on('click', function(e) {
-        console.log(e.currentTarget.id);
+        // console.log(e.currentTarget.id);
         if ($('body').css('overflow') != 'hidden') {
             $('body').css('overflow', 'hidden');
         }
@@ -61,15 +64,15 @@
         } else {
             // Mobile UI portfolio section interactions
             $('#port-items .item').eq(e.currentTarget.id - 1).css('display', 'inline-block');
-            $('#port-items .item').eq(e.currentTarget.id - 2).css({'display': 'inline-block', 'top': '-100%', 'position': 'absolute'});
+            $('#port-items .item').eq(e.currentTarget.id - 2).css('opacity', '0');
         }
         event.preventDefault();
       });
       $('#work .item .mdi-window-close').on('click', function(e) {
-        if ($('body').css('overflow') != 'auto') {
+        if ($('body').css('overflow') === 'hidden') {
             $('body').css('overflow', 'auto');
         }
-        $('#port-items').fadeOut('fast'); 
+        $('#port-items').fadeOut('fast');
         // $('#port-items .item').css('opacity', '0');
       });
     },
@@ -82,35 +85,11 @@
     },
 
     //Funfacts
-    BusionApp.prototype.initFunfact = function() {
-        // var a = 0;
-        // $(window).on('scroll',function() {
-        //     var oTop = $('#counter').offset().top - window.innerHeight;
-        //     if (a == 0 && $(window).scrollTop() > oTop) {
-        //         $('.lan_fun_value').each(function() {
-        //             var $this = $(this),
-        //                 countTo = $this.attr('data-count');
-        //             $({
-        //                 countNum: $this.text()
-        //             }).animate({
-        //                     countNum: countTo
-        //                 },
-        //                 {
-        //                     duration: 2000,
-        //                     easing: 'swing',
-        //                     step: function() {
-        //                         $this.text(Math.floor(this.countNum));
-        //                     },
-        //                     complete: function() {
-        //                         $this.text(this.countNum);
-        //                         //alert('finished');
-        //                     }
-
-        //                 });
-        //         });
-        //         a = 1;
-        //     }
-        // });
+    BusionApp.prototype.mobileFuncs = function() {
+        if ($(window).width() < 900) {
+          $('#video').hide();
+          $('.h-100vh').css('background', 'url(images/mobile-bg.png)')
+        }
     },
 
     //Mfpvideo
@@ -129,7 +108,7 @@
         this.initStickyMenu();
         this.initSmoothLink();
         this.initScrollspy();
-        this.initFunfact();
+        this.mobileFuncs();
         this.inithomepopvideo();
     },
     //init
