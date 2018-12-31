@@ -87,7 +87,7 @@
     //Funfacts
     BusionApp.prototype.mobileFuncs = function() {
         if ($(window).width() < 900) {
-          $('#video').css('display', 'none');
+          $('.youtube-bg').playerDestroy();
           $('.h-100vh').css('background', 'url(images/mobile-bg.png)')
         }
     },
