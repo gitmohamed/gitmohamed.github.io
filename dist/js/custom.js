@@ -7,7 +7,7 @@
 *------------------------------------------------------------
 */
 
-! function($) {
+!function($) {
     "use strict";
 
     var BusionApp = function() {};
@@ -42,6 +42,12 @@
 
     //Smooth
     BusionApp.prototype.initSmoothLink = function() {
+        let destroyPortfolio = () => {
+            if ($('body').css('overflow') === 'hidden') {
+                $('body').css('overflow', 'auto');
+            }
+            $('#port-items').fadeOut('fast');
+        }
       $('.navbar-nav a, .bus_home_btn a').on('click', function(event) {
           // console.log(this);
           var $anchor = $(this);
@@ -69,11 +75,7 @@
         event.preventDefault();
       });
       $('#work .item .mdi-window-close').on('click', function(e) {
-        if ($('body').css('overflow') === 'hidden') {
-            $('body').css('overflow', 'auto');
-        }
-        $('#port-items').fadeOut('fast');
-        // $('#port-items .item').css('opacity', '0');
+        destroyPortfolio();
       });
     },
 
