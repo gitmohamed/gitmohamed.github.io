@@ -27,7 +27,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-
 /* ANIMATIONS */
 
 @keyframes bounceDrop{
@@ -122,10 +121,21 @@ body::-webkit-scrollbar-thumb {
 
 #contact {
     background-color: #000 !important;
+    padding-top: 30px;
 }
 
 #contact .mdi-vector-combine {
     color: whitesmoke !important;
+}
+
+#contact .social-icon {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+#contact .social-icon a {
+    color: whitesmoke;
 }
 
 .stickyadd.custom-nav {
@@ -369,7 +379,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .custom-nav .navbar-nav li a {
-    color: #989898;
+    color: #ededed;
     font-size: 15px;
     background-color: transparent !important;
     padding: 15px 0;
@@ -522,6 +532,7 @@ body::-webkit-scrollbar-thumb {
 
 #port-items .item img {
     width: 100%;
+    padding: 70px 0px 0 10px;
 }
 
 #port-items .item .mdi-window-close {
@@ -882,7 +893,7 @@ textarea.form-control {
     .custom-nav {
         padding: 0px !important;
         /* background-color: #000000 !important; */
-        border-bottom: 1px solid #2f2f2f;
+        /* border-bottom: 1px solid #2f2f2f; */
     }
     .custom-nav .navbar-nav li a {
         margin: 0 0px;
