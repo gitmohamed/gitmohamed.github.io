@@ -853,6 +853,7 @@ textarea.form-control {
     }
     #port-items .item .ion-md-close {
       font-size: 35px;
+      background: rgba(255, 255, 255, 0.65);
     }
     .work-item {
         width: 100%;
