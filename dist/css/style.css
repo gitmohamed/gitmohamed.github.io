@@ -27,7 +27,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-
 /* ANIMATIONS */
 
 @keyframes bounceDrop{
@@ -73,15 +72,15 @@ button:focus {
   box-shadow: none !important;
 }
 
-#port-items.item::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-#port-items.item::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
 }
 
-#port-items.item::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: white;
   outline: 1px solid black;
 }
@@ -122,10 +121,21 @@ button:focus {
 
 #contact {
     background-color: #000 !important;
+    padding-top: 30px;
 }
 
 #contact .mdi-vector-combine {
     color: whitesmoke !important;
+}
+
+#contact .social-icon {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+#contact .social-icon a {
+    color: whitesmoke;
 }
 
 .stickyadd.custom-nav {
@@ -369,7 +379,7 @@ button:focus {
 }
 
 .custom-nav .navbar-nav li a {
-    color: #989898;
+    color: #ededed;
     font-size: 15px;
     background-color: transparent !important;
     padding: 15px 0;
@@ -522,6 +532,7 @@ button:focus {
 
 #port-items .item img {
     width: 100%;
+    padding: 70px 0px 0 10px;
 }
 
 #port-items .item .mdi-window-close {
@@ -845,6 +856,9 @@ textarea.form-control {
       transform: scale(2);
       right: 0;
     }
+    #video {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -879,7 +893,7 @@ textarea.form-control {
     .custom-nav {
         padding: 0px !important;
         /* background-color: #000000 !important; */
-        border-bottom: 1px solid #2f2f2f;
+        /* border-bottom: 1px solid #2f2f2f; */
     }
     .custom-nav .navbar-nav li a {
         margin: 0 0px;
