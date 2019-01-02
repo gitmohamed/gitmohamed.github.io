@@ -95,7 +95,7 @@
     BusionApp.prototype.mobileFuncs = function() {
         if ($(window).width() < 900) {
           $('.youtube-bg').playerDestroy();
-          $('.h-100vh').css('background', 'url(images/mobile-bg.png)')
+          $('.bg-overlay').css('background', 'url(images/mobile-bg.png)')
         }
     },
 
