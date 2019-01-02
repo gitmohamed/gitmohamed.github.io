@@ -68,7 +68,7 @@
         }
         event.preventDefault();
       });
-      $('#work .item .mdi-window-close').on('click', function(e) {
+      $('#work .item .ion-md-close').on('click', function(e) {
         destroyPortfolio();
       });
     },

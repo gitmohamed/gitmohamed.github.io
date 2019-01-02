@@ -535,11 +535,12 @@ body::-webkit-scrollbar-thumb {
     padding: 70px 0px 0 10px;
 }
 
-#port-items .item .mdi-window-close {
-    font-size: 40px;
-    padding: 10px;
-    right: 4vw;
-    top: 4vh;
+#port-items .item .ion-md-close {
+    font-size: 35px;
+    padding: 10px 20px;
+    right: 0vw;
+    top: 0vh;
+    background: rgba(255, 255, 255, 0.45);
     position: fixed;
     cursor: pointer;
     will-change: transform, color;
