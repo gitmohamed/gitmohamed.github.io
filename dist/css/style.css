@@ -132,6 +132,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     font-size: 40px;
     padding: 20px 0;
+    max-width: 33.3%;
 }
 
 #contact .social-icon a {
@@ -532,11 +533,14 @@ body::-webkit-scrollbar-thumb {
 
 #port-items .item img {
     width: 100%;
-    padding: 70px 0px 0 10px;
+}
+
+#port-items .item img:first-of-type {
+    padding: 70px 0px 0 0px;
 }
 
 #port-items .item .ion-md-close {
-    font-size: 35px;
+    font-size: 40px;
     padding: 10px 20px;
     right: 0vw;
     top: 0vh;
@@ -547,7 +551,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.3s ease-in-out;
 }
 
-#port-items .item .mdi-window-close:hover {
+#port-items .item .ion-md-close:hover {
     transform: rotate(90deg);
     color: orange;
 }
@@ -844,6 +848,9 @@ textarea.form-control {
 @media screen and (max-width: 900px) {
     #port-items .item {
       max-width: 100% !important;
+    }
+    #port-items .item .ion-md-close {
+      font-size: 35px;
     }
     .work-item {
         width: 100%;

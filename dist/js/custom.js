@@ -31,10 +31,12 @@
             if (scroll >= 50) {
                 $(".sticky").addClass("stickyadd");
                 $('.st0').css('fill', '#000');
+                $('.navbar-nav li a').css('color', '#333');
                 $(".mbri-menu").css('color', 'black');
             } else {
                 $(".sticky").removeClass("stickyadd");
                 $('.st0').css('fill', '#fff');
+                $('.navbar-nav li a').css('color', '#ededed');
                 $(".mbri-menu").css('color', 'white');
             }
         });
@@ -80,7 +82,7 @@
         });
         (function(w, d){
             var b = d.getElementsByTagName('body')[0];
-            var s = d.createElement("script"); 
+            var s = d.createElement("script");
             var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
             s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
             s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
