@@ -75,10 +75,15 @@
             // Mobile UI portfolio section interactions
             $('#port-items .item').eq(e.currentTarget.id - 1).css('display', 'inline-block');
             $('#port-items .item').eq(e.currentTarget.id - 2).css('opacity', '0');
+            // Disable complete dom mobile scroll
+            $('html, body').on('touchstart touchmove', function(e){ 
+                //prevent native touch activity like scrolling
+                e.preventDefault(); 
+           });           
         }
         event.preventDefault();
       });
-      $('#work .item .ion-md-close, .close-work span').on('click', function(e) {
+      $('#work .item .ion-md-close, #port-items .close-work').on('click', function(e) {
         destroyPortfolio();
       });
     },
