@@ -32,11 +32,13 @@
                 $(".sticky").addClass("stickyadd");
                 $('.st0').css('fill', '#000');
                 $('.navbar-nav li a').css('color', '#333');
+                $('.custom-nav').css('background', 'white');
                 $(".mbri-menu").css('color', 'black');
             } else {
                 $(".sticky").removeClass("stickyadd");
                 $('.st0').css('fill', '#fff');
                 $('.navbar-nav li a').css('color', '#ededed');
+                window.innerWidth > 990 ? $('.custom-nav').css('background', 'transparent') : $('.custom-nav').css('background', 'black');
                 $(".mbri-menu").css('color', 'white');
             }
         });
@@ -70,7 +72,7 @@
         }
         event.preventDefault();
       });
-      $('#work .item .ion-md-close').on('click', function(e) {
+      $('#work .item .ion-md-close, .close-work span').on('click', function(e) {
         destroyPortfolio();
       });
     },
@@ -82,9 +84,10 @@
         });
         $(window).on("scroll", function(e) {
             let top = window.scrollY;
-            // if (top === 0) {
-            //     $(".custom-nav").css("background", "transparent !important");
-            // }
+            let sections = ["#clients", "#client"]
+            if (top === 0) {
+                $(".custom-nav").css("background", "transparent !important");
+            }
             // if (($("#client").offset().top - top == 0) ||
             //     ($("#client").offset().top - top == 0) ||
             //     ($("#client").offset().top - top == 0) ||
@@ -100,7 +103,9 @@
             var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
             s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
             s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
-            w.lazyLoadOptions = {/* Your options here */};
+            w.lazyLoadOptions = {
+
+            };
             b.appendChild(s);
         }(window, document));
     },

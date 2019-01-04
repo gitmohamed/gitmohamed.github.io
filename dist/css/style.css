@@ -284,6 +284,7 @@ button:focus {
 
 .bg-overlay {
     background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 38px 86px 20px black;
     position: absolute;
     top: 0;
     right: 0;
@@ -572,6 +573,15 @@ button:focus {
     width: 100%;
     height: 7px;
     background: #FBB03B;
+}
+
+.close-work span {
+    display: none;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    background: transparent;
+    z-index: 998;
 }
 
 .shown {
