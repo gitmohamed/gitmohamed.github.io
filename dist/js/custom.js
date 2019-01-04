@@ -80,6 +80,20 @@
         $("#navbarCollapse").scrollspy({
             offset:20
         });
+        $(window).on("scroll", function(e) {
+            let top = window.scrollY;
+            // if (top === 0) {
+            //     $(".custom-nav").css("background", "transparent !important");
+            // }
+            // if (($("#client").offset().top - top == 0) ||
+            //     ($("#client").offset().top - top == 0) ||
+            //     ($("#client").offset().top - top == 0) ||
+            //     ($("#client").offset().top - top == 0) ||
+            //     ($("#client").offset().top - top == 0) ||
+            //     ) {
+
+            // }
+        });
         (function(w, d){
             var b = d.getElementsByTagName('body')[0];
             var s = d.createElement("script");
