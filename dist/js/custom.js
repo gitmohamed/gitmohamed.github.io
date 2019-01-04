@@ -38,7 +38,7 @@
                 $(".sticky").removeClass("stickyadd");
                 $('.st0').css('fill', '#fff');
                 $('.navbar-nav li a').css('color', '#ededed');
-                window.innerWidth > 990 ? $('.custom-nav').css('background', 'transparent') : $('.custom-nav').css('background', 'black');
+                $('.custom-nav').css('background', 'transparent');
                 $(".mbri-menu").css('color', 'white');
             }
         });
@@ -55,6 +55,11 @@
           }, 1500, 'easeInOutExpo');
           event.preventDefault();
       });
+      $('.navbar-toggler').on('click', function(e) {
+        if ($(window).scrollTop() <= 50) {
+            $('.custom-nav').css('background', 'black');
+        }
+      });
       $('#work .mt-3').on('click', function(e) {
         // console.log(e.currentTarget.id);
         if ($('body').css('overflow') != 'hidden') {
@@ -64,6 +69,7 @@
         $('#port-items .item').hide();
         $('#port-items .item').eq(e.currentTarget.id - 1).css('opacity', '1');
         if (window.innerWidth > 768) {
+            $('.close-work').show('fast');
             $('#port-items .item').eq(e.currentTarget.id - 1).css('display', 'flex');
         } else {
             // Mobile UI portfolio section interactions
@@ -112,9 +118,9 @@
 
     //Funfacts
     BusionApp.prototype.mobileFuncs = function() {
-        if ($(window).width() < 900) {
-          $('.youtube-bg').playerDestroy();
-          $('.bg-overlay').css('background', 'url(images/mobile-bg.png)')
+        if ($(window).width() <= 750) {
+        //   $('.youtube-bg').playerDestroy();
+          $('.bg-overlay').css('background', 'url(images/mobile-bg.png) center center no-repeat');
         }
     },
 
