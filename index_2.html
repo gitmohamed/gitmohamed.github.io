@@ -339,7 +339,7 @@
                             <p class="port-text">This email in particular was designed to win back customers who abandoned their carts during a transaction on https://officialvgod.com. Over several months hundreds of customers and tens of thousands in revenue was recovered from this automated email.</p>
                             <div class="port-buttons">
                                 <button type="button" name="visit">Visit</button>
-                                <button type="button" name="contact" onclick="exitModal()">Contact</button>
+                                <button type="button" name="contact" onclick="destroyPortfolio()">Contact</button>
                             </div>
                         </div>
                     </div>
@@ -355,7 +355,7 @@
                                 <p class="port-text">Often times quick prototypes of potential interface animations are necessary to make decisions. This - mouse animated - prototype went all the way to production on officialvgod.com</p>
                                 <div class="port-buttons">
                                     <a target="_blank" href="https://cubano-black.herokuapp.com/"><button type="button" name="visit">Visit</button></a>
-                                    <button type="button" name="contact" onclick="exitModal()">Contact</button>
+                                    <button type="button" name="contact" onclick="destroyPortfolio()">Contact</button>
                                 </div>
                             </div>
                         </div>
@@ -537,6 +537,14 @@
                     e.stopPropagation();
                 });
             }
+            (function(w, d){
+                var b = d.getElementsByTagName('body')[0];
+                var s = d.createElement("script");
+                var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
+                s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+                s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
+                b.appendChild(s);
+            }(window, document));
         </script>
     </body>
 </html>

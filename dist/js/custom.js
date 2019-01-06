@@ -95,30 +95,10 @@
         });
         $(window).on("scroll", function(e) {
             let top = window.scrollY;
-            let sections = ["#clients", "#client"]
             if (top === 0) {
                 $(".custom-nav").css("background", "transparent !important");
             }
-            // if (($("#client").offset().top - top == 0) ||
-            //     ($("#client").offset().top - top == 0) ||
-            //     ($("#client").offset().top - top == 0) ||
-            //     ($("#client").offset().top - top == 0) ||
-            //     ($("#client").offset().top - top == 0) ||
-            //     ) {
-
-            // }
         });
-        (function(w, d){
-            var b = d.getElementsByTagName('body')[0];
-            var s = d.createElement("script");
-            var v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0";
-            s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
-            s.src = "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" + v + "/dist/lazyload.min.js";
-            w.lazyLoadOptions = {
-
-            };
-            b.appendChild(s);
-        }(window, document));
     },
 
     //Funfacts
@@ -131,14 +111,14 @@
 
     //Mfpvideo
     BusionApp.prototype.inithomepopvideo = function() {
-        $('.watch-video').magnificPopup({
-            disableOn: 700,
-            type: 'iframe',
-            mainClass: 'mfp-fade',
-            removalDelay: 160,
-            preloader: false,
-            fixedContentPos: false
-        });
+        // $('.watch-video').magnificPopup({
+        //     disableOn: 700,
+        //     type: 'iframe',
+        //     mainClass: 'mfp-fade',
+        //     removalDelay: 160,
+        //     preloader: false,
+        //     fixedContentPos: false
+        // });
     },
 
     BusionApp.prototype.init = function() {
