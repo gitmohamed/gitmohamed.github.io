@@ -495,6 +495,14 @@ button:focus {
 .bus_home_btn {
     padding-top: 7px;
 }
+.personal_note {
+    text-align: left;
+    line-height: 2.3rem;
+    padding-left: 22vw;
+    padding-top: 4vh;
+    letter-spacing: 2px;
+    color: #ffffffad;
+}
 
 /*-----HOME 2----*/
 .home-half{
@@ -904,6 +912,12 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+    .personal_note {
+        line-height: 2rem !important;
+    }
+    .bg-overlay {
+        background-size: auto 110vh !important;
+    }
     .font-weight-bold {
         font-size: 1.3rem;
         letter-spacing: 1px;
