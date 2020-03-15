@@ -546,10 +546,10 @@ button:focus {
 #port-items .item img {
     width: 100%;
 }
-
+/* 
 #port-items .item img:first-of-type {
     padding: 70px 0px 0 0px;
-}
+} */
 
 #about .ion-md-contact {
     color: #222;
