@@ -981,6 +981,13 @@ span{
     #video {
         display: none;
     }
+    .mt-3 {
+        flex-basis: auto;
+        padding: 10px;
+    }
+    .pt-4 {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 768px) {
