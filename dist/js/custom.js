@@ -46,7 +46,7 @@
 
     //Smooth
     BusionApp.prototype.initSmoothLink = function() {
-      $('.navbar-nav a, .bus_home_btn a').on('click', function(event) {
+      $('.navbar-nav a, .btn-5').on('click', function(event) {
           // console.log(this);
           var $anchor = $(this);
           $('.navbar-collapse').removeClass('show');

@@ -99,9 +99,11 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-12">
                                 <div class="text-white text-center">
-                                    <h1 class="bus_home_title mx-auto">Front End Developing</h1>
-                                    <p class="personal_note">I’m a web developer and code obsessed designer working in Greater Los Angeles area. Working for the last 4 years building experiences for the web, I use foundational web technologies (HTML, CSS, JS), web libraries and CMS systems like WordPress, Magento, Shopify, jQuery, and NodeJS. I try learn something new everyday.</p>
-                                    <p class="bus_home_subtitle pt-4 mx-auto"></p>
+                                    <h1 class="bus_home_title mx-auto">Full Stack Engineer  Web Developer</h1>
+                                    <p class="personal_note"></p>
+                                    <p class="bus_home_subtitle pt-4 mx-auto">Hi I'm Mohamed, I use Javascript and core web technologies to solve problems and deliver results.</p>
+                                    <a href="#work" class="btn-5"><span>See Work</span></a>
+                                    <a href="images/MohamedHassanResume.pdf" download class="resume"><i class="icon ion-ios-document"></i>  Download Resume</a>
                                     <!-- <div class="bus_home_btn">
                                         <a href="#work" class="btn btn-outline-custom btn-rounded">View Portfolio</a>
                                         <a href="#contact" class="btn btn-outline-custom">Contact</a>
@@ -194,7 +196,7 @@
                         </div>
                         <div class="col mt-3">
                             <div class="logo_img">
-                                <img src="images/clients/3.png" alt="logo-img" class="mx-auto img-fluid d-block">
+                                <img src="images/clients/7.png" alt="logo-img" class="mx-auto img-fluid d-block">
                             </div>
                         </div>
                         <div class="col mt-3">
@@ -253,7 +255,7 @@
                 </div>
                 <div class="row mt-4 pt-4">
                   <div id="1" class="col-lg-4 mt-3">
-                    <img src="images/work/thumbs/df-thumb.png" alt="">
+                    <img src="images/work/thumbs/royally-thumb.png" alt="">
                   </div>
                   <div id="2" class="col-lg-4 mt-3">
                     <img src="images/work/thumbs/live-coin-thumb.png" alt="">
@@ -278,19 +280,17 @@
                     </div>
                     <div class="item">
                         <div class="col-lg-6">
-                            <img src="images/work/dream-factory.png" alt="The Dream Factory">
-                            <span class="orange"></span>
-                            <img src="images/work/Profile.png" alt="The Dream Factory Profile">
+                            <img src="images/work/screencapture-royallyrust.png" alt="Royally Rust">
                         </div>
                         <div class="col-lg-6 port-info">
                             <span ontouchstart="destroyPortfolio()" class="cancel-modal"><i class="icon ion-md-close"></i></span>
                             <div class="port-logo">
-                                <h1>The Dream Factory</h1>
+                                <h1>Royally Rust</h1>
                             </div>
-                            <p class="port-text">http://thedreamfactory.io is a convenient way for artists to take commissions online. Buyers can describe anything they imagine and artists can accept whatever inspires them most.</p>
+                            <p class="port-text">http://royallyrust.com is a Rust game server website developed to be the home base for the ultimate Rust 2x modded gaming experience - Royally Rust</p>
                             <div class="port-buttons">
-                                <button type="button" name="visit">Offline</button>
-                                <button type="button" name="contact">Contact</button>
+                                <a target="_blank" href="http://royallyrust.com"><button type="button" name="visit">Visit</button></a>
+                                <button type="button" name="contact" onclick="exitModal()">Contact</button>
                             </div>
                         </div>
                     </div>
@@ -321,10 +321,10 @@
                             <div class="port-logo">
                                 <h1>Easy Concert Concept App</h1>
                             </div>
-                            <p class="port-text">Designed in sketch, this app is intended to allow users to find tickets for upcoming concerts.</p>
+                            <p class="port-text">Designed in sketch, this concept app is intended to allow users to find tickets for upcoming concerts.</p>
                             <div class="port-buttons">
-                                <button type="button" name="visit">Visit</button>
-                                <button type="button" name="contact">Contact</button>
+                                <button type="button" name="visit">Not Available</button>
+                                <button type="button" name="contact" onclick="exitModal()">Contact</button>
                             </div>
                         </div>
                     </div>
@@ -339,8 +339,8 @@
                             </div>
                             <p class="port-text">This email in particular was designed to win back customers who abandoned their carts during a transaction on https://officialvgod.com. Over several months hundreds of customers and tens of thousands in revenue was recovered from this automated email.</p>
                             <div class="port-buttons">
-                                <button type="button" name="visit">Visit</button>
-                                <button type="button" name="contact" onclick="destroyPortfolio()">Contact</button>
+                                <a href="http://officialvgod.com"><button type="button" name="visit">Visit</button></a>
+                                <button type="button" name="contact" onclick="exitModal()">Contact</button>
                             </div>
                         </div>
                     </div>
@@ -356,7 +356,7 @@
                                 <p class="port-text">Often times quick prototypes of potential interface designs are necessary to make decisions. This - mouse animated - prototype was developed using HTML/CSS/JS.</p>
                                 <div class="port-buttons">
                                     <a target="_blank" href="https://cubano-black.herokuapp.com/"><button type="button" name="visit">Visit</button></a>
-                                    <button type="button" name="contact" onclick="destroyPortfolio()">Contact</button>
+                                    <button type="button" name="contact" onclick="exitModal()">Contact</button>
                                 </div>
                             </div>
                         </div>
@@ -509,7 +509,7 @@
                 </div>
             </div>
         </footer>
-        <!-- End Footer
+        <!-- End Footer -->
 
         <!-- JAVASCRIPTS -->
         <script src="js/jquery.min.js"></script>
@@ -537,6 +537,13 @@
                     //allow native touch activity like scrolling
                     e.stopPropagation();
                 });
+            }
+            let exitModal = () => {
+                if ($('body').css('overflow') === 'hidden') {
+                    $('body').css('overflow', 'auto');
+                }
+                $('#port-items').fadeOut('fast');
+                $('.nav-link:last-of-type').click();
             }
             (function(w, d){
                 var b = d.getElementsByTagName('body')[0];

@@ -4,7 +4,7 @@ const compression = require('compression');
 
 const app = express();
 
-app.set('port', (process.env.PORT || 3333))
+app.set('port', (process.env.PORT || 1889))
 // app.use(cors({origin: 'http://localhost:3333'}));
 app.use(express.static('./dist'))
 app.use(compression());
