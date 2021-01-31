@@ -593,7 +593,7 @@ button:focus {
 
 #port-items .item .col-lg-6 {
     padding-left: 0;
-    padding-right: 25px;
+    padding-right: 0px;
 }
 
 .close-work {
@@ -968,7 +968,6 @@ span{
     }
     #port-items .item .ion-md-close {
       font-size: 35px;
-      background: rgba(255, 255, 255, 0.65) !important;
     }
     .work-item {
         width: 100%;
@@ -1026,8 +1025,32 @@ span{
         max-height: 100vh;
         -webkit-overflow-scrolling: touch;
     }
-    #port-items .item  .col-lg-6 {
+    #port-items .item .col-lg-6 {
         width: 100%;
+        padding-top: 56px;
+    }
+    #port-items .item .col-lg-6:last-child {
+        margin-bottom: 50px;
+        transform: scale(0.85);
+    }
+    .port-logo {
+        padding-top: 0;
+    }
+    #port-items .item .ion-md-close {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+    .cancel-modal {
+        display: block;
+        position: fixed;
+        left: -2px;
+        padding: 2px 12px;
+        background: #fff;
+        z-index: 99;
+    }
+    .cancel-modal i {
+        font-size: 32px;
     }
     .custom-nav {
         padding: 0px !important;

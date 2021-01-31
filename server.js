@@ -37,5 +37,5 @@ app.get('/', (req, res) => {
   //   }
   // });
 }).listen(app.get('port'), () => {
-  console.log('App live...')
+  console.log(`App live on port ${app.get('port')}...`)
 })
