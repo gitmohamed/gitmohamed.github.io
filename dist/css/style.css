@@ -591,9 +591,12 @@ button:focus {
     background: #FBB03B;
 }
 
-#port-items .item .col-lg-6 {
-    padding-left: 0;
-    padding-right: 0px;
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 50px;
+    font-size: 20px;
 }
 
 .close-work {
@@ -881,7 +884,7 @@ textarea.form-control {
 
 
 
-span{
+  .btn-5 span {
     display: block;
     padding: 20px 80px;
   }
@@ -1028,6 +1031,8 @@ span{
     #port-items .item .col-lg-6 {
         width: 100%;
         padding-top: 56px;
+        padding-left: 0;
+        padding-right: 0px;
     }
     #port-items .item .col-lg-6:last-child {
         margin-bottom: 50px;
