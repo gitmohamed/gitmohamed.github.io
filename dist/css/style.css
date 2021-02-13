@@ -409,7 +409,7 @@ button:focus {
     padding: 8px 0px;
     color: #333;
     background-color: #fff;
-    /* border-bottom: 1px solid #fbb03b85; */
+    border-bottom: 1px solid #fbb03b85;
 }
 
 .custom-nav .navbar-nav li.active a,
