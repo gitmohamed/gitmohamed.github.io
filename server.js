@@ -10,7 +10,7 @@ app.use(express.static('./dist'))
 app.use(compression());
 app.get('/', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.sendFile(`${__dirname}/index_2.html`)
+  res.sendFile(`${__dirname}/index.html`)
 }).post('/contact', (req, res) => {
   // let mailOpts, smtpTrans;
   // smtpTrans = nodemailer.createTransport({
