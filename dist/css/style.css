@@ -67,7 +67,7 @@ a:hover,
 a:focus,
 button,
 button:focus {
-  text-decoration: none !important;
+  text-decoration: none;
   outline: none !important;
   box-shadow: none !important;
   color: inherit;
@@ -187,6 +187,7 @@ button:focus {
 
 #work .col-lg-4 {
   overflow: hidden;
+  cursor: pointer;
   margin-bottom: 10px;
 }
 
@@ -541,8 +542,11 @@ button:focus {
     box-sizing: border-box;
     opacity: 0;
 }
+#port-items .item.full {
+    flex-direction: column;
+}
 
-#port-items .item img {
+#port-items .item img, #port-items .item video {
     width: 100%;
 }
 /* 

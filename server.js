@@ -6,7 +6,7 @@ const app = express();
 
 app.set('port', (process.env.PORT || 1889))
 // app.use(cors({origin: 'http://localhost:3333'}));
-app.use(express.static('./dist'))
+// app.use(express.static('./dist'))
 app.use(compression());
 app.get('/', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
