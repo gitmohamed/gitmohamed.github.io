@@ -73,6 +73,10 @@ button:focus {
   color: inherit;
 }
 
+#port-items .item .col-lg-6 {
+    padding-left: 0;
+}
+
 #port-items .item::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -541,6 +545,8 @@ button:focus {
     overflow: auto;
     box-sizing: border-box;
     opacity: 0;
+    border-left: 1px solid #878787;
+    border-right: 1px solid #878787;
 }
 #port-items .item.full {
     flex-direction: column;
