@@ -901,7 +901,7 @@ textarea.form-control {
   .btn-5::before, .btn-5::after{
     content:"";
     width: 0;
-    height: 2px;
+    height: 1px;
     position: absolute;
     transition: all 0.2s linear;
     background: #fff;
@@ -909,7 +909,7 @@ textarea.form-control {
   
   span::before, span::after{
     content:"";
-    width:2px;
+    width:1px;
     height:0;
     position: absolute;
     transition: all 0.2s linear;
