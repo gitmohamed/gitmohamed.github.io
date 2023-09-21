@@ -9,21 +9,12 @@
 
 ! function($) {
     "use strict";
-
     var BusionApp = function() {};
-
-    // $('.contact-me').css({'transform': 'translate(0, 0)', 'opacity': 1});
 
     //scroll
     BusionApp.prototype.initStickyMenu = function() {
         $(window).on('scroll',function() {
             var scroll = $(window).scrollTop();
-            // Animate work section
-            // Game Stats
-            // $('.gStats1').css('transform', 'translate(-' + scroll/50 + 'px)');
-            // $('.gStats3').css('transform', 'translate(' + scroll/50 + 'px)');
-            // Live Coin Price
-            // window.innerWidth<800 ? null : $('.back-img').css('left', '-' + Math.min(scroll/150, 100) + 'vw');
             // Blur video background as user scrolls
             $('.home-table').css('filter', 'blur(' + Math.min(scroll/100, 5) + 'px)');
 
@@ -36,7 +27,6 @@
             }
         });
     },
-
     //Smooth
     BusionApp.prototype.initSmoothLink = function() {
         $('.navbar-nav a, .bus_home_btn a').on('click', function(event) {
@@ -49,54 +39,16 @@
         });
         $('#work .mt-3 a').on('click', function(e) {
           $(this).find('p').css('display', 'block');
-          // $('.modal').addClass('shown');
           console.log('test');
           event.preventDefault();
         });
-        // $('#contact').on('submit', function(event) {
-        //   $.ajax()
-        // });
     },
-
     //ScrollSpy
     BusionApp.prototype.initScrollspy = function() {
         $("#navbarCollapse").scrollspy({
             offset:20
         });
     },
-
-    //Funfacts
-    BusionApp.prototype.initFunfact = function() {
-        // var a = 0;
-        // $(window).on('scroll',function() {
-        //     var oTop = $('#counter').offset().top - window.innerHeight;
-        //     if (a == 0 && $(window).scrollTop() > oTop) {
-        //         $('.lan_fun_value').each(function() {
-        //             var $this = $(this),
-        //                 countTo = $this.attr('data-count');
-        //             $({
-        //                 countNum: $this.text()
-        //             }).animate({
-        //                     countNum: countTo
-        //                 },
-        //                 {
-        //                     duration: 2000,
-        //                     easing: 'swing',
-        //                     step: function() {
-        //                         $this.text(Math.floor(this.countNum));
-        //                     },
-        //                     complete: function() {
-        //                         $this.text(this.countNum);
-        //                         //alert('finished');
-        //                     }
-
-        //                 });
-        //         });
-        //         a = 1;
-        //     }
-        // });
-    },
-
     //Mfpvideo
     BusionApp.prototype.inithomepopvideo = function() {
         $('.watch-video').magnificPopup({
@@ -108,7 +60,6 @@
             fixedContentPos: false
         });
     },
-
     BusionApp.prototype.init = function() {
         this.initStickyMenu();
         this.initSmoothLink();
