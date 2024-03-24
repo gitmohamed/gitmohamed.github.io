@@ -127,6 +127,8 @@ button:focus {
 #contact {
     background-color: #000 !important;
     padding-top: 30px;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 #contact .mdi-vector-combine {
@@ -539,7 +541,7 @@ button:focus {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    max-width: 65vw;
+    max-width: 1220px;
     background: white;
     height: 100vh;
     overflow: auto;
@@ -554,6 +556,9 @@ button:focus {
 
 #port-items .item img, #port-items .item video {
     width: 100%;
+}
+.thumb-container {
+    padding: 0;
 }
 /* 
 #port-items .item img:first-of-type {
