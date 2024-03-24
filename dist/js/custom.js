@@ -25,8 +25,10 @@
             // Live Coin Price
             // window.innerWidth<800 ? null : $('.back-img').css('left', '-' + Math.min(scroll/150, 100) + 'vw');
             // Blur video background as user scrolls
-            $('.home-table').css('transform', `translateY(${scroll/5}px)`);
-            $('.home-table').css('opacity', `${1 - Math.max(scroll/800, 0)}`);
+            if(window.innerWidth > 900) {
+                $('.home-table').css('transform', `translateY(${scroll/5}px)`);
+                $('.home-table').css('opacity', `${1 - Math.max(scroll/800, 0)}`);
+            }
             // $('.home-table').css('transform', `rotate3d(1, 0, 0, ${Math.min(scroll/5, 50)}deg)`);
             if (scroll >= 50) {
                 $(".sticky").addClass("stickyadd");

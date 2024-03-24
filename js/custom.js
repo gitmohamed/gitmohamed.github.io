@@ -17,7 +17,6 @@
             var scroll = $(window).scrollTop();
             // Blur video background as user scrolls
             $('.home-table').css('filter', 'blur(' + Math.min(scroll/100, 5) + 'px)');
-
             if (scroll >= 50) {
                 $(".sticky").addClass("stickyadd");
                 window.innerWidth<800 ? null : $('.st0').css('fill', '#000');

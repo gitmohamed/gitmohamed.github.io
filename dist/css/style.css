@@ -981,6 +981,10 @@ textarea.form-control {
 }
 
 @media screen and (max-width: 900px) {
+    #contact {
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+    }
     #port-items .item {
       max-width: 100% !important;
     }
