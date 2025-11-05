@@ -1118,7 +1118,7 @@ textarea.form-control {
 @media (max-width: 768px) {
     .custom-nav {
         padding: 0px !important;
-        background-color: var(--primary-black) !important;
+        /* background-color: var(--primary-black) !important; */
         border-bottom: 1px solid var(--border-color);
     }
     .custom-nav .navbar-nav li a {
@@ -1493,6 +1493,7 @@ textarea.form-control {
 /* Original Template Button Style */
 .btn-5 {
     display: inline-block;
+    margin: 8px;
     padding: 12px 30px;
     background: var(--accent-yellow);
     color: var(--primary-black);

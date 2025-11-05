@@ -1491,6 +1491,7 @@ nfo Sticky Positioning */
 /* Original Template Button Style */
 .btn-5 {
     display: inline-block;
+    margin: 8px;
     padding: 12px 30px;
     background: var(--accent-yellow);
     color: var(--text-secondary);
