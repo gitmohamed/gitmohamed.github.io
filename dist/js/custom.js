@@ -34,12 +34,14 @@
                 $(".sticky").addClass("stickyadd");
                 $('.st0').css('fill', '#000');
                 $('.navbar-nav li a').css('color', '#333');
+                $('.navbar-brand').css('color', '#333');
                 $('.custom-nav').css('background', 'white');
                 $(".mbri-menu").css('color', 'black');
             } else {
                 $(".sticky").removeClass("stickyadd");
                 $('.st0').css('fill', '#fff');
                 $('.navbar-nav li a').css('color', '#ededed');
+                $('.navbar-brand').css('color', '#ededed');
                 $('.custom-nav').css('background', 'transparent');
                 $(".mbri-menu").css('color', 'white');
             }
@@ -62,21 +64,25 @@
             $('.custom-nav').css('background', 'black');
         }
       });
-      $('#work .mt-3').on('click', function(e) {
-        // console.log(e.currentTarget.id);
+      $('#work .mt-3, #work .portfolio-card').on('click', function(e) {
+        // Find the parent element with ID if clicked on portfolio-card
+        var targetElement = $(this).hasClass('portfolio-card') ? $(this).closest('.mt-3') : $(this);
+        var targetId = targetElement.attr('id');
+        
+        // console.log(targetId);
         if ($('body').css('overflow') != 'hidden') {
             $('body').css('overflow', 'hidden');
         }
         $('#port-items').fadeIn('fast');
         $('#port-items .item').hide();
-        $('#port-items .item').eq(e.currentTarget.id - 1).css('opacity', '1');
+        $('#port-items .item').eq(targetId - 1).css('opacity', '1');
         if (window.innerWidth > 768) {
             $('.close-work').show('fast');
-            $('#port-items .item').eq(e.currentTarget.id - 1).css('display', 'flex');
+            $('#port-items .item').eq(targetId - 1).css('display', 'flex');
         } else {
             // Mobile UI portfolio section interactions
-            $('#port-items .item').eq(e.currentTarget.id - 1).css('display', 'inline-block');
-            $('#port-items .item').eq(e.currentTarget.id - 2).css('opacity', '0');
+            $('#port-items .item').eq(targetId - 1).css('display', 'inline-block');
+            $('#port-items .item').eq(targetId - 2).css('opacity', '0');
             // Disable complete dom mobile scroll
             $('html, body').on('touchstart touchmove', function(e){ 
                 //prevent native touch activity like scrolling
@@ -139,3 +145,26 @@ function($) {
     "use strict";
     $.BusionApp.init();
 }(window.jQuery);
+// Portfolio Filter Functionality
+$(document).ready(function() {
+    $('.filter-btn').on('click', function() {
+        var filterValue = $(this).data('filter');
+        
+        // Update active button
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        // Filter portfolio items
+        if (filterValue === 'all') {
+            $('.portfolio-item').removeClass('hidden');
+        } else {
+            $('.portfolio-item').each(function() {
+                if ($(this).data('category') === filterValue) {
+                    $(this).removeClass('hidden');
+                } else {
+                    $(this).addClass('hidden');
+                }
+            });
+        }
+    });
+});

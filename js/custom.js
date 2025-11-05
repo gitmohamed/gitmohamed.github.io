@@ -75,3 +75,26 @@ function($) {
     "use strict";
     $.BusionApp.init();
 }(window.jQuery);
+// Portfolio Filter Functionality
+$(document).ready(function() {
+    $('.filter-btn').on('click', function() {
+        var filterValue = $(this).data('filter');
+        
+        // Update active button
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        // Filter portfolio items
+        if (filterValue === 'all') {
+            $('.portfolio-item').removeClass('hidden');
+        } else {
+            $('.portfolio-item').each(function() {
+                if ($(this).data('category') === filterValue) {
+                    $(this).removeClass('hidden');
+                } else {
+                    $(this).addClass('hidden');
+                }
+            });
+        }
+    });
+});
