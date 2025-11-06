@@ -422,7 +422,7 @@ button:focus {
     padding: 8px 0px;
     color: var(--text-white);
     background-color: var(--primary-black);
-    border-bottom: 1px solid var(--border-color);
+    /* border-bottom: 1px solid var(--border-color); */
 }
 
 .custom-nav .navbar-nav li.active a,
