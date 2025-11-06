@@ -1119,7 +1119,6 @@ textarea.form-control {
     .custom-nav {
         padding: 0px !important;
         background-color: var(--primary-black) !important;
-        border-bottom: 1px solid var(--border-color);
     }
     .custom-nav .navbar-nav li a {
         margin: 0 0px;
