@@ -1168,6 +1168,9 @@ textarea.form-control {
     .home-half {
         padding: 120px 0 80px 0 !important;
     }
+    .close-work {
+        top: 5px !important;
+    }
 }
 
 /* Portfolio Enhancement Styles */
@@ -1394,7 +1397,7 @@ textarea.form-control {
 }
 
 .close-work {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 30px;
     right: 30px;

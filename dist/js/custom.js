@@ -77,7 +77,7 @@
         $('#port-items .item').hide();
         $('#port-items .item').eq(targetId - 1).css('opacity', '1');
         if (window.innerWidth > 768) {
-            $('.close-work').show('fast');
+            // $('.close-work').show('fast');
             $('#port-items .item').eq(targetId - 1).css('display', 'flex');
         } else {
             // Mobile UI portfolio section interactions
